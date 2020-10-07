@@ -17,7 +17,8 @@ Do the following:
 
    HINT: no function required
 */
-
+var votingAge = '19'
+ 
 
 
 /*
@@ -30,7 +31,13 @@ Do the following:
 
    HINT: no function required
 */
-
+var time = '10'
+var timeOfDay ='Night'
+if (time < 18){
+    timeOfDay = 'Good Day!'; 
+} else {
+  timeOfDay;
+}
 
 
 
@@ -46,8 +53,15 @@ Do the following:
    HINT: look up the Number method
 */
 
+ function toNumber (){
+  let year = "1999";
+  let a = Number(year);
+  
+ }
 
 
+
+console.log(toNumber());
 
 /*
 Task 1d - Multiply
@@ -58,11 +72,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a , b){
+    return a * b;
   }
 
-
+// console.log(multiply(5,4))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -74,8 +88,8 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(humanYears){
+    return humanYears * 7;
 }
 
 
@@ -94,22 +108,42 @@ Use the hungryDog function and feeding requirements below to do the following:
   Feeding Requirements:
 
   Adult Dogs 1 year and older 
-     up to 5 lbs - 5% of their body weight
-     6 - 10 lbs - 4% of their body weight 
-     11 - 15 lbs - 3% of their body weight 
-     > 15lbs - 2% of their body weight 
+     up to 5 lbs - 5% of their body wight
+     6 - 10 lbs - 4% of their body weght 
+     11 - 15 lbs - 3% of their body wight 
+     > 15lbs - 2% of their body weigh 
 
   Puppies less than 1 year
-     2 - 4 months 10% of their body weight
-     4 - 7 months 5% of their body weight 
+     2 - 4 months 10% of their body wight
+     4 - 7 months 5% of their body weght 
      7 - 12 months 4% of their body weight
     
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
-  }
+function hungryDog(weight,age){
+  if (age >= 1) {
+      if (weight <= 5){
+        return weight * .05;
+    } else if (weight >= 6 && weight <= 10) {
+        return weight * .04;
+    } else if ( weight >= 11 && weight <= 15) {
+        return  weight * .03; 
+    } else {
+        return weight * .02;
+    }
+}  else if (age >= (2/12) && age <= (4/12)){
+    return weight * .1;
+}  else if (age >=(5/12) && age <= (7/12)) {
+    return weight * .05;
+} else {
+  return weight * .04;
+}
+
+}
+  
+  console.log(hungryDog(1, 15));
+  
 
 
 
@@ -127,8 +161,22 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-function game(/*add your code here*/){
-    /*add your code here*/
+function game(choice){
+   let choice2 = Math.random();
+   if (choice2 <= .3){
+     botChoice == 'paper';
+   } else if (choice2 >=.3 && choice2 <=.6){
+     botChoice == 'rock';
+   } else {
+     botChoice == 'scissors';
+   }
+   if(choice == botChoice){
+     return 'tie';
+   } else if (choice == 'paper' && botChoice == 'rock' || choice == 'rock' && botChoice == 'scissors' || choice == 'scissors' && botChoice == 'paper'){
+      return 'win';
+   } else {
+     return 'lose';
+   }
 }
   
   
@@ -144,8 +192,9 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(km){
+  return km * 0.621371;
+  
   }
 
 
@@ -158,8 +207,8 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    return cm/30.48;
   }
  
 
